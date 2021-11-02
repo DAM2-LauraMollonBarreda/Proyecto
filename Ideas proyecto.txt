@@ -1,1 +1,21 @@
+Aplicacion de mosqueruela (Mosqueruela mi pueblo)
 
+  --Con usurios o con solamente invitados que tengan una funcion limitada en la apliccacion 
+  
+  --Los usuarios se registraran con facebook o con google
+  
+  --Los usuarios no registrados solamente entraran en la aplicacion para ver el tema turimo de este pueblo 
+  
+  --Tendremos
+      -Casco antiguo, edificios que visitar
+      -Servicios del pueblo y localizacion
+      -Fiestas y carteles del pueblo
+      -Localizacion de los cazadores para ver donde se esta haciendo la batida para que no haya peligro
+      -Tema de pagos de pases 
+      -Los usuarios registrados aparte podran ver;
+        -Los bandos y cosas de interes para los habitantes 
+        -Contacto con el ayuntamiento 
+        -Relleno de solicito... con envio directo al ayuntamiento de mosqueruela
+        -Pagos de reservas...
+        
+        
