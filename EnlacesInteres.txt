@@ -1,5 +1,8 @@
 http://moodle.cpilosenlaces.com/mod/forum/discuss.php?d=16802
 
+https://es.slideshare.net/JssicaCaraballoSilga/proyecto-dam (ejemplo de proyecto dam)
+https://repositorio.uam.es/bitstream/handle/10486/662281/gomez_matesanz_alfonso_tfg.pdf?sequence=1 (ejemplo proyecto universidad)
+
 
 --APLICACION --
   https://www.codigocorrecto.com/flutter/cambiar-el-icono-de-una-aplicacion-en-flutter/   (CAMBIAR EL ICONO EN FLUTTER)
