@@ -1,1 +1,6 @@
 http://moodle.cpilosenlaces.com/mod/forum/discuss.php?d=16802
+
+
+--APLICACION --
+  https://www.codigocorrecto.com/flutter/cambiar-el-icono-de-una-aplicacion-en-flutter/   (CAMBIAR EL ICONO EN FLUTTER)
+  
