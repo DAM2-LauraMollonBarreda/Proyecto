@@ -12,3 +12,7 @@ https://www.youtube.com/playlist?list=PLutrh4gv1YI8ap4JO23lN81JOSZJ3i5OO   (list
 --APLICACION --
   https://www.codigocorrecto.com/flutter/cambiar-el-icono-de-una-aplicacion-en-flutter/   (CAMBIAR EL ICONO EN FLUTTER)
   
+--SUBIR LA APLICACION--
+  https://www.youtube.com/watch?v=vBHmJHp8Ldo (a play store)
+  https://support.uptodown.com/hc/es/articles/360053260491-C%C3%B3mo-publicar-una-app-en-Uptodown  (a upToDown)
+  
