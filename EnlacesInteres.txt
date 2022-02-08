@@ -11,6 +11,7 @@ https://www.youtube.com/playlist?list=PLutrh4gv1YI8ap4JO23lN81JOSZJ3i5OO   (list
 
 --APLICACION --
   https://www.codigocorrecto.com/flutter/cambiar-el-icono-de-una-aplicacion-en-flutter/   (CAMBIAR EL ICONO EN FLUTTER)
+  https://openwebinars.net/academia/aprende/flutter-firebase/?enroll=1         (firebase con flutter)
   
 --SUBIR LA APLICACION--
   https://www.youtube.com/watch?v=vBHmJHp8Ldo (a play store)
