@@ -1,1 +1,19 @@
 http://moodle.cpilosenlaces.com/mod/forum/discuss.php?d=16802
+
+https://es.slideshare.net/JssicaCaraballoSilga/proyecto-dam (ejemplo de proyecto dam)
+https://repositorio.uam.es/bitstream/handle/10486/662281/gomez_matesanz_alfonso_tfg.pdf?sequence=1 (ejemplo proyecto universidad)
+https://www.youtube.com/playlist?list=PLutrh4gv1YI8ap4JO23lN81JOSZJ3i5OO   (lista flutter)
+    -Firebase para ios
+    -Fibase para android
+    -Icono de la app
+    -Menu lateral
+
+
+--APLICACION --
+  https://www.codigocorrecto.com/flutter/cambiar-el-icono-de-una-aplicacion-en-flutter/   (CAMBIAR EL ICONO EN FLUTTER)
+  https://openwebinars.net/academia/aprende/flutter-firebase/?enroll=1         (firebase con flutter)
+  
+--SUBIR LA APLICACION--
+  https://www.youtube.com/watch?v=vBHmJHp8Ldo (a play store)
+  https://support.uptodown.com/hc/es/articles/360053260491-C%C3%B3mo-publicar-una-app-en-Uptodown  (a upToDown)
+  
