@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "450339544052",
+    "firebase_url": "https://appmosqueruela-44410-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "appmosqueruela-44410",
+    "storage_bucket": "appmosqueruela-44410.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450339544052:android:5349e5614a9c47686e77a1",
+        "android_client_info": {
+          "package_name": "com.appMosqueruela.mosqueruela"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450339544052-5u6vc1eunqj7q6kk98b6go56bjbiikm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ3nEMGOwXu07f-W4kml2JBwFJaSFhNeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450339544052-5u6vc1eunqj7q6kk98b6go56bjbiikm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
