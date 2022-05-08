@@ -47,12 +47,20 @@ class cazaScreen extends StatelessWidget {
             children: <Widget>[
               Expanded(
                   child: IconButton(
-                icon: Icon(Icons.info),
+                icon: Icon(
+                  Icons.info,
+                  color: Colors.cyan,
+                  size: 30,
+                ),
                 onPressed: () {},
               )),
               Expanded(
                   child: IconButton(
-                icon: Icon(Icons.map),
+                icon: Icon(
+                  Icons.map,
+                  color: Colors.cyan,
+                  size: 30,
+                ),
                 onPressed: () {},
               )),
             ],
@@ -67,7 +75,11 @@ class cazaScreen extends StatelessWidget {
             children: <Widget>[
               Expanded(
                   child: IconButton(
-                icon: Icon(Icons.info),
+                icon: Icon(
+                  Icons.info,
+                  color: Colors.cyan,
+                  size: 30,
+                ),
                 onPressed: () {
                   //Todo: Falta poner la redireccion a la zona de la asociacion de los cazadores
                 },

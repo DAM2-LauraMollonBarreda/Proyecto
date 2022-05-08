@@ -12,6 +12,8 @@ class CallPhoneWidget extends StatelessWidget {
       onPressed: () {
         launch('tel://$phoneNumber');
       },
+      iconSize: 30,
+      color: Colors.cyan,
     );
   }
 }
@@ -27,6 +29,8 @@ class CallURLWidget extends StatelessWidget {
       onPressed: () {
         launch(url);
       },
+      iconSize: 30,
+      color: Colors.cyan,
     );
   }
 }

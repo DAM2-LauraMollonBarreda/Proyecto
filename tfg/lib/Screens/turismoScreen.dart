@@ -1,6 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:tfg/models/category_model.dart';
+import 'package:tfg/models/modelTurismo.dart';
 
 import '../Widgets/widgets.dart';
 
@@ -42,7 +43,7 @@ class _turismoScreenState extends State<turismoScreen> {
             ),
             //imagenes y texto las cojemos de el archivo category_model
             //clase que ver
-            items: queVer.ver
+            items: queVer.list_queVer
                 .map((e) => cardDeslizableVer(
                       category: e,
                     ))
@@ -72,7 +73,7 @@ class _turismoScreenState extends State<turismoScreen> {
           CarouselSlider(
             //imagenes y texto las cojemos de el archivo category_model
             //clase rutasCortas
-            items: rutasCortas.rutasc
+            items: rutasCortas.list_rutasCortas
                 .map((e) => cardDeslizableRutasCortas(category: e))
                 .toList(),
             options: CarouselOptions(
@@ -88,7 +89,7 @@ class _turismoScreenState extends State<turismoScreen> {
           CarouselSlider(
             //imagenes y texto las cojemos de el archivo category_model
             //clase rutasLargas
-            items: rutasLargas.rutasl
+            items: rutasLargas.list_rutasLargas
                 .map((e) => cardDeslizableRutasLargas(category: e))
                 .toList(),
             options: CarouselOptions(
@@ -100,10 +101,6 @@ class _turismoScreenState extends State<turismoScreen> {
               autoPlay: false,
             ),
           ),
-          // widget de texto con formato y una alineacion concreta
-          encabezados(titulo: 'Oficina de turismo'),
-          // widget con boton abre el telefono para llamar al numero que le estamos pasando
-          CallPhoneWidget('978805258'),
         ],
       ),
     );

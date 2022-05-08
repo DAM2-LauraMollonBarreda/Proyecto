@@ -1,44 +1,4 @@
-import 'package:equatable/equatable.dart';
-//CLASES QUE TIENEN LAS IMAGENES Y TITULOS DE LA PANTALLA TURISMO
-
-class queVer extends Equatable {
-  final String name;
-  final String imgUrl;
-
-  const queVer({
-    required this.name,
-    required this.imgUrl,
-  });
-
-  @override
-  List<Object?> get props => [name, imgUrl];
-
-  static List<queVer> ver = [
-    queVer(
-        name: 'Iglesia de la asuncion',
-        imgUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmSdIbCd4ZZbMHqqS5uBHNZ9QsE_U18M8mtg&usqp=CAU"),
-    queVer(
-        name: 'Portal de san roque',
-        imgUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZZKIqe0VSS_4zFXl5sGylLHjfkMspGIkw0g&usqp=CAU"),
-  ];
-}
-
-class rutasLargas extends Equatable {
-  final String name;
-  final String imgUrl;
-
-  const rutasLargas({
-    required this.name,
-    required this.imgUrl,
-  });
-
-  @override
-  List<Object?> get props => [name, imgUrl];
-
-  static List<rutasLargas> rutasl = [
-    rutasLargas(
+ rutasLargas(
         name: 'El Lapiaz 1,9km (necesario coche)',
         imgUrl: "https://mosqueruela.es/wp-content/uploads/El-Lapiaz.jpg"),
     rutasLargas(
@@ -78,23 +38,12 @@ class rutasLargas extends Equatable {
         name: 'La Estrella por el Pedaño 20km',
         imgUrl:
             "https://mosqueruela.es/wp-content/uploads/La-Estrella-por-El-Pedan%CC%83o-1.jpg"),
-  ];
-}
 
-class rutasCortas extends Equatable {
-  final String name;
-  final String imgUrl;
 
-  const rutasCortas({
-    required this.name,
-    required this.imgUrl,
-  });
 
-  @override
-  List<Object?> get props => [name, imgUrl];
 
-  static List<rutasCortas> rutasc = [
-    rutasCortas(
+
+rutasCortas(
         name: 'Fuente y ermita de San Lamberto 0.5km',
         imgUrl:
             "https://mosqueruela.es/wp-content/uploads/Fuente-y-ermita-de-San-Lamberto.jpg"),
@@ -130,5 +79,5 @@ class rutasCortas extends Equatable {
         name: 'Fuente de San Pedro 1km',
         imgUrl:
             "https://mosqueruela.es/wp-content/plugins/elementor/assets/images/placeholder.png"),
-  ];
-}
+
+

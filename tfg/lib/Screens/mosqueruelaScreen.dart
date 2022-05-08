@@ -30,22 +30,32 @@ class _mosqueruelaScreenState extends State<mosqueruelaScreen> {
             margin: EdgeInsets.all(15),
           ),
           //widget en el que pasamos icono, titulo y la informacion
-          filaInfo(icono: Icons.map, titulo: 'Latitud', texto: '4654645654'),
-          filaInfo(icono: Icons.map, titulo: 'Longitud', texto: '454546'),
-          filaInfo(icono: Icons.people, titulo: 'Habitantes', texto: '500'),
-          filaInfo(icono: Icons.terrain, titulo: 'Extension', texto: 'km'),
+          Row(children: <Widget>[
+            Padding(padding: EdgeInsets.all(10)),
+            filaInfo(icono: Icons.map, titulo: 'Latitud', texto: '4654645654'),
+            Padding(padding: EdgeInsets.all(15)),
+            filaInfo(icono: Icons.map, titulo: 'Longitud', texto: '454546'),
+          ]),
+          Row(children: <Widget>[
+            Padding(padding: EdgeInsets.all(15)),
+            filaInfo(icono: Icons.people, titulo: 'Habitantes', texto: '500'),
+            Padding(padding: EdgeInsets.only(left: 60)),
+            filaInfo(icono: Icons.terrain, titulo: 'Extension', texto: 'km'),
+          ]),
+
           filaInfo(icono: Icons.height, titulo: 'Altitud', texto: '1500'),
           //un boton en el que se abre el mapa
+          Padding(padding: EdgeInsets.all(10)),
           Ink(
             //boton redondo
             decoration: const ShapeDecoration(
-              color: Colors.red,
+              color: Color(0xfffa825a),
               shape: CircleBorder(),
             ),
             //y el icono
             child: IconButton(
-              icon: const Icon(Icons.map),
-              color: Colors.white,
+              icon: const Icon(Icons.location_on),
+              color: Colors.cyan[50],
               //TO_DO:
               onPressed: () {},
             ),

@@ -17,96 +17,112 @@ class drawerPersonalizado extends StatelessWidget {
   Widget build(BuildContext context) {
     //devuelve un drawer
     return Drawer(
-      //que contiene columnas
-      child: Column(
-        children: [
-          //Contenedor en el que se guarda la imagen del escudo de mosqueruela
-          Container(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+      // Important: Remove any padding from the ListView.
+      padding: EdgeInsets.zero,
+      children: [
+        const DrawerHeader(
+          decoration: BoxDecoration(),
+          child: Image(
             width: 250,
-            height: 150,
-            margin: EdgeInsets.all(55),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(80),
-                image: DecorationImage(
-                  image: NetworkImage(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Escudo_de_Mosqueruela.svg/1119px-Escudo_de_Mosqueruela.svg.png'),
-                  fit: BoxFit.scaleDown,
-                )),
+            image: NetworkImage(
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Escudo_de_Mosqueruela.svg/1119px-Escudo_de_Mosqueruela.svg.png'),
           ),
-          //Botones que llevan a cada una de las pantallas
-          FlatButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => mosqueruelaScreen()));
-            },
-            child: Text("Mosqueruela"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => turismoScreen()));
-            },
-            child: Text("Turismo"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => serviciosScreen()));
-            },
-            child: Text("Servicios"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => cazaScreen()));
-            },
-            child: Text("Caza"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {},
-            child: Text("Noticias y bandos"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => asociacionesScreen()));
-            },
-            child: Text("Asociaciones"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ayuntamientoScreen()));
-            },
-            child: Text("Ayuntamiento"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-          FlatButton(
-            onPressed: () {},
-            child: Text("Entrar como usuario"),
-            minWidth: double.infinity,
-            color: Colors.grey[100],
-          ),
-        ],
-      ),
-    );
+        ),
+        Padding(padding: EdgeInsets.all(15)),
+        ListTile(
+          title: Text('Mosqueruela',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => mosqueruelaScreen()));
+          },
+        ),
+        ListTile(
+          title: Text('Turismo',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => turismoScreen()));
+          },
+        ),
+        ListTile(
+          title: Text('Caza',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => cazaScreen()));
+          },
+        ),
+        ListTile(
+          title: Text('Servicios',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => serviciosScreen()));
+          },
+        ),
+        ListTile(
+          title: Text('Noticias y bandos',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {},
+        ),
+        ListTile(
+          title: Text('Asociaciones',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => asociacionesScreen()));
+          },
+        ),
+        ListTile(
+          title: Text('Ayuntamiento',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.cyan[700])),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ayuntamientoScreen()));
+          },
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.person),
+          color: Colors.cyan[700],
+          iconSize: 30,
+          alignment: Alignment.bottomCenter,
+        )
+      ],
+    ));
   }
 }
 
@@ -129,28 +145,29 @@ class appbarPersonalizado extends StatelessWidget
   Widget build(BuildContext context) {
     //Creamos el app bar
     return AppBar(
+      backgroundColor: Colors.white,
       //Le pasamos un texto que sera pasado cuando se llame al widget
       title: Text(
         title,
-        style: TextStyle(color: Colors.black),
+        style: TextStyle(
+            color: Color(0xfffa825a),
+            fontSize: 20,
+            fontWeight: FontWeight.bold),
       ),
 
-      //el texto en el centro
       centerTitle: true,
 
-      //color de fondo
-      backgroundColor: Colors.white,
       leading: IconButton(
-        color: Colors.black,
         icon: const Icon(Icons.menu),
         onPressed: () => _scaffoldKey.currentState?.openDrawer(),
+        color: Color(0xfffa825a),
       ),
 
       // Coloca el icono detrás para volver al inicio
       actions: <Widget>[
         IconButton(
-          color: Colors.black,
           icon: const Icon(Icons.home),
+          color: Color(0xfffa825a),
           onPressed: () {
             //volvemos al inicio
             Navigator.pushAndRemoveUntil(

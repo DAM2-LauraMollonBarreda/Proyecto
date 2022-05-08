@@ -1,7 +1,9 @@
+import 'dart:ui';
+
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg/Widgets/botones.dart';
-import 'package:tfg/models/category_model.dart';
+import 'package:tfg/models/modelTurismo.dart';
 
 class tarjetaExpandible extends StatelessWidget {
   String url = "";
@@ -40,10 +42,11 @@ class tarjetaExpandible extends StatelessWidget {
                       tapBodyToCollapse: true, tapBodyToExpand: true),
                   header: Padding(
                     padding: const EdgeInsets.all(10),
-                    child: Text(
-                      titulo,
-                      style: const TextStyle(color: Colors.black),
-                    ),
+                    child: Text(titulo,
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xfffa825a))),
                   ),
                   expanded: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,15 +57,20 @@ class tarjetaExpandible extends StatelessWidget {
                           child: Text(texto,
                               softWrap: true,
                               overflow: TextOverflow.fade,
-                              style: const TextStyle(color: Colors.black)),
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.black)),
                         ),
                     ],
                   ),
-                  collapsed: Text(texto,
-                      softWrap: true,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(color: Colors.black)),
+                  collapsed: Text(
+                    texto,
+                    softWrap: true,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    //style: const TextStyle(color: Colors.black)
+                  ),
                   builder: (_, collapsed, expanded) {
                     return Padding(
                       padding: const EdgeInsets.only(
@@ -70,7 +78,7 @@ class tarjetaExpandible extends StatelessWidget {
                       child: Expandable(
                         collapsed: collapsed,
                         expanded: expanded,
-                        theme: const ExpandableThemeData(crossFadePoint: 0),
+                        //theme: const ExpandableThemeData(crossFadePoint: 0),
                       ),
                     );
                   },
@@ -107,8 +115,8 @@ class cardDeslizableVer extends StatelessWidget {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(0, 0, 0, 0)
+                          Color.fromARGB(236, 0, 0, 0),
+                          Color.fromARGB(150, 0, 0, 0)
                         ],
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
@@ -119,7 +127,7 @@ class cardDeslizableVer extends StatelessWidget {
                     child: Text(
                       category.name,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 236, 230),
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -156,8 +164,8 @@ class cardDeslizableRutasLargas extends StatelessWidget {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(0, 0, 0, 0)
+                          Color.fromARGB(236, 0, 0, 0),
+                          Color.fromARGB(150, 0, 0, 0)
                         ],
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
@@ -168,7 +176,7 @@ class cardDeslizableRutasLargas extends StatelessWidget {
                     child: Text(
                       category.name,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 236, 230),
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -205,8 +213,8 @@ class cardDeslizableRutasCortas extends StatelessWidget {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(0, 0, 0, 0)
+                          Color.fromARGB(236, 0, 0, 0),
+                          Color.fromARGB(150, 0, 0, 0)
                         ],
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
@@ -217,7 +225,7 @@ class cardDeslizableRutasCortas extends StatelessWidget {
                     child: Text(
                       category.name,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 252, 236, 230),
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),

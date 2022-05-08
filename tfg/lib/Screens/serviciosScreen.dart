@@ -44,13 +44,21 @@ class _serviciosScreenState extends State<serviciosScreen> {
                       ),
                       child: ListTile(
                         dense: false,
-                        leading: Icon(Icons.restaurant),
+                        leading: Icon(
+                          Icons.restaurant,
+                          color: Colors.cyan,
+                          size: 30,
+                        ),
                         title: Text(
                           "Bares y restaurantes",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Color(0xfffa825a)),
                         ),
-                        trailing: Icon(Icons.arrow_forward_ios),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                        ),
                       ),
                     )),
                 GestureDetector(
@@ -65,11 +73,17 @@ class _serviciosScreenState extends State<serviciosScreen> {
                       ),
                       child: ListTile(
                         dense: false,
-                        leading: Icon(Icons.bed),
+                        leading: Icon(
+                          Icons.bed,
+                          color: Colors.cyan,
+                          size: 30,
+                        ),
                         title: Text(
                           "Alojamiento",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Color(0xfffa825a)),
                         ),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -86,11 +100,17 @@ class _serviciosScreenState extends State<serviciosScreen> {
                       ),
                       child: ListTile(
                         dense: false,
-                        leading: Icon(Icons.shopping_cart),
+                        leading: Icon(
+                          Icons.shopping_cart,
+                          color: Colors.cyan,
+                          size: 30,
+                        ),
                         title: Text(
                           "Tiendas",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Color(0xfffa825a)),
                         ),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),
@@ -105,11 +125,17 @@ class _serviciosScreenState extends State<serviciosScreen> {
                       ),
                       child: ListTile(
                         dense: false,
-                        leading: Icon(Icons.other_houses),
+                        leading: Icon(
+                          Icons.other_houses,
+                          color: Colors.cyan,
+                          size: 30,
+                        ),
                         title: Text(
                           "Otros",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Color(0xfffa825a)),
                         ),
                         trailing: Icon(Icons.arrow_forward_ios),
                       ),

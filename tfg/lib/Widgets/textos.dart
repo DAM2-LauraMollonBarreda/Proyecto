@@ -17,9 +17,19 @@ class filaInfo extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icono),
-        Text("    " + titulo + "     "),
-        Text(texto),
+        Icon(
+          icono,
+          color: Colors.cyan,
+          size: 30,
+        ),
+        Text(
+          " " + titulo + "   ",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Text(
+          texto,
+          style: TextStyle(fontWeight: FontWeight.w500),
+        ),
       ],
     );
   }
@@ -42,7 +52,10 @@ class encabezados extends StatelessWidget {
         ),
         Text(
           titulo,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(
+              color: Color.fromARGB(255, 0, 181, 205),
+              fontWeight: FontWeight.bold,
+              fontSize: 25),
         ),
       ],
     );
