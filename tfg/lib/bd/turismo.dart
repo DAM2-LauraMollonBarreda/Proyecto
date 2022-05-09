@@ -12,3 +12,21 @@ leer_queVer_turismo() {
     });
   });
 }
+
+leer_rutasCortas_turismo() {
+  FirebaseFirestore.instance.collection('rutasCortas').get().then((resultados) {
+    resultados.docs.forEach((elementos) {
+      rutasCortas.list_rutasCortas.add(rutasCortas(
+          name: elementos.data()['sitio'], imgUrl: elementos.data()['img']));
+    });
+  });
+}
+
+leer_rutasLargas_turismo() {
+  FirebaseFirestore.instance.collection('rutasLargas').get().then((resultados) {
+    resultados.docs.forEach((elementos) {
+      rutasLargas.list_rutasLargas.add(rutasLargas(
+          name: elementos.data()['sitio'], imgUrl: elementos.data()['img']));
+    });
+  });
+}
