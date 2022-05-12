@@ -16,7 +16,6 @@ class tarjetaExpandible extends StatelessWidget {
     required this.titulo,
     required this.texto,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return ExpandableNotifier(
@@ -288,6 +287,92 @@ class contenedorServicios extends StatelessWidget {
             children: <Widget>[CallPhoneWidget(telefono), CallURLWidget(url)],
           )
         ],
+      ),
+    );
+  }
+}
+
+class noticiasExpandible extends StatelessWidget {
+  String url = "";
+  String titulo = "";
+  String texto = "";
+
+  noticiasExpandible({
+    Key? key,
+    required this.url,
+    required this.titulo,
+    required this.texto,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return ExpandableNotifier(
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Card(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 150,
+                child: FadeInImage(
+                  image: NetworkImage(url),
+                  placeholder: const AssetImage('assets/loading.gif'),
+                  width: double.infinity,
+                  height: 100,
+                  fit: BoxFit.cover,
+                  fadeInDuration: const Duration(milliseconds: 3000),
+                ),
+              ),
+              ScrollOnExpand(
+                child: ExpandablePanel(
+                  theme: const ExpandableThemeData(
+                      tapBodyToCollapse: true, tapBodyToExpand: true),
+                  header: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(titulo,
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xfffa825a))),
+                  ),
+                  expanded: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      for (var _ in Iterable.generate(1))
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Text(texto,
+                              softWrap: true,
+                              overflow: TextOverflow.fade,
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.black)),
+                        ),
+                    ],
+                  ),
+                  collapsed: Text(
+                    texto,
+                    softWrap: true,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    //style: const TextStyle(color: Colors.black)
+                  ),
+                  builder: (_, collapsed, expanded) {
+                    return Padding(
+                      padding: const EdgeInsets.only(
+                          left: 10, right: 10, bottom: 10),
+                      child: Expandable(
+                        collapsed: collapsed,
+                        expanded: expanded,
+                        //theme: const ExpandableThemeData(crossFadePoint: 0),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

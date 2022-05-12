@@ -3,6 +3,7 @@ import 'package:tfg/Screens/asociacionesScreen.dart';
 import 'package:tfg/Screens/ayuntamientoScreen.dart';
 import 'package:tfg/Screens/homeScreen.dart';
 import 'package:tfg/Screens/mosqueruelaScreen.dart';
+import 'package:tfg/Screens/noticiasScreen.dart';
 import 'package:tfg/Screens/serviciosScreen.dart';
 import 'package:tfg/Screens/turismoScreen.dart';
 
@@ -88,7 +89,10 @@ class drawerPersonalizado extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.cyan[700])),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => noticiasScreen()));
+          },
         ),
         ListTile(
           title: Text('Asociaciones',
