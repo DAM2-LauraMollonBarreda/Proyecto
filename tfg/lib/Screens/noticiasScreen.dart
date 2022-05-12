@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:tfg/Widgets/tarjetas.dart';
 import 'package:tfg/models/modelNoticas.dart';
 
@@ -14,19 +15,22 @@ class noticiasScreen extends StatefulWidget {
 
 class _noticiasScreenState extends State<noticiasScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   //titulo de la aplicacion
   String titulo = 'Noticias y bandos';
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  // ignore: prefer_final_fields
-  static List<Widget> _widgetOptions = <Widget>[
+
+  static List<Widget> widgetOptions = <Widget>[
     //Si estas en la zona del tab en la que salen todas las noticias
     ListView.separated(
       itemBuilder: ((context, index) {
+        DateTime fecha = noticias.list_noticias[index].fecha.toDate();
+        String fecha_string = DateFormat('dd/MM/yyyy').format(fecha).toString();
         return tarjetaExpandible(
           texto: noticias.list_noticias[index].texto,
-          titulo: noticias.list_noticias[index].title,
+          titulo: fecha_string,
           url: noticias.list_noticias[index].imgUrl,
         );
       }),
@@ -81,7 +85,7 @@ class _noticiasScreenState extends State<noticiasScreen> {
       //widget creado en el que abrimos el menu de la izquierda
       drawer: drawerPersonalizado(),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

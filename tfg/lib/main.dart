@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:tfg/Screens/splashScreen.dart';
 
-import 'bd/turismo.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
