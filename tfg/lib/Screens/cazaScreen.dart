@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tfg/Screens/caza/batida.dart';
 import 'package:tfg/Widgets/botones.dart';
 import 'package:tfg/Widgets/tarjetas.dart';
 
@@ -61,7 +62,10 @@ class cazaScreen extends StatelessWidget {
                   color: Colors.cyan,
                   size: 30,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BatidaScreen()));
+                },
               )),
             ],
           ),

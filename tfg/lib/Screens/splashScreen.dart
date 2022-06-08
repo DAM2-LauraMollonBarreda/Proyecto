@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tfg/Screens/homeScreen.dart';
 import 'package:tfg/bd/noticias.dart';
+import 'package:tfg/bd/servicios.dart';
 
 import '../bd/turismo.dart';
 
@@ -18,6 +19,7 @@ class _splashScreenState extends State<splashScreen> {
     leer_rutasCortas_turismo();
     leer_rutasLargas_turismo();
     leer_todasNoticias_noticias();
+    leer_servicios();
 
     Timer(
         Duration(seconds: 3),

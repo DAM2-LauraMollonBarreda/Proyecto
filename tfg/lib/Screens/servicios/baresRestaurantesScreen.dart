@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tfg/Widgets/tarjetas.dart';
+import 'package:tfg/models/modelServicios.dart';
 
 import '../../Widgets/appBar.dart';
 
@@ -18,17 +19,21 @@ class baresRestaurantesScreen extends StatelessWidget {
       appBar: appbarPersonalizado(title: titulo, scaffoldKey: _scaffoldKey),
       //widget creado en el que abrimos el menu de la izquierda
       drawer: drawerPersonalizado(),
-      body: ListView(
-        children: [
-          contenedorServicios(
-            url: 'https://www.hotelmontenieve.net/',
-            titulo: 'Hotel Motenieve',
-            telefono: '978805123',
-            calle: 'Carretera Venta del Aire, 44410',
-            imagen:
-                'https://z.cdrst.com/foto/hotel-sf/1598a/granderesp/hotel-montenieve-general-ba19376.jpg',
-          )
-        ],
+      body: ListView.separated(
+        itemBuilder: ((context, index) {
+          if (servicios.list_servicios[index].sitio == 'bar' ||
+              servicios.list_servicios[index].sitio == 'restaurante') {
+            return contenedorServicios(
+                imagen: servicios.list_servicios[index].imagen,
+                titulo: servicios.list_servicios[index].nombre,
+                telefono: servicios.list_servicios[index].telefono,
+                calle: servicios.list_servicios[index].direccion,
+                url: servicios.list_servicios[index].web);
+          }
+          return Text('hola');
+        }),
+        itemCount: servicios.list_servicios.length,
+        separatorBuilder: (context, index) => Divider(),
       ),
     );
   }
