@@ -4,12 +4,12 @@
     <!--<uses-permission android:name=”android.permission.ACCESS_COARSE_LOCATION” />-->
     <!--<uses-permission android:name=”android.permission.ACCESS_BACKGROUND_LOCATION” />-->
    <application
-        android:label="tfg"
+        android:label="MOvilSQUERUELA"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
 
-         <!--<meta-data android:name="com.google.android.geo.API_KEY"
-           android:value="AIzaSyCZ3nEMGOwXu07f-W4kml2JBwFJaSFhNeI"/>-->
+         <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCZ3nEMGOwXu07f-W4kml2JBwFJaSFhNeI"/>
            
 
         <activity

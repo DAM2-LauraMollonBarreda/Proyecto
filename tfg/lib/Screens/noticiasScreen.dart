@@ -5,6 +5,7 @@ import 'package:tfg/models/modelNoticas.dart';
 
 import '../Widgets/appBar.dart';
 import '../Widgets/textos.dart';
+import '../bd/noticias.dart';
 
 class noticiasScreen extends StatefulWidget {
   const noticiasScreen({Key? key}) : super(key: key);
@@ -84,6 +85,7 @@ class _noticiasScreenState extends State<noticiasScreen> {
       appBar: appbarPersonalizado(title: titulo, scaffoldKey: _scaffoldKey),
       //widget creado en el que abrimos el menu de la izquierda
       drawer: drawerPersonalizado(),
+
       body: Center(
         child: widgetOptions.elementAt(_selectedIndex),
       ),

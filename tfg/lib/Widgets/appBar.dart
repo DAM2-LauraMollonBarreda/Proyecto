@@ -118,13 +118,6 @@ class drawerPersonalizado extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => ayuntamientoScreen()));
           },
         ),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.person),
-          color: Colors.cyan[700],
-          iconSize: 30,
-          alignment: Alignment.bottomCenter,
-        )
       ],
     ));
   }

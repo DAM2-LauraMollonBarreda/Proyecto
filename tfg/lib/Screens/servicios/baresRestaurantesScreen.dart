@@ -30,7 +30,7 @@ class baresRestaurantesScreen extends StatelessWidget {
                 calle: servicios.list_servicios[index].direccion,
                 url: servicios.list_servicios[index].web);
           }
-          return Text('hola');
+          return Container();
         }),
         itemCount: servicios.list_servicios.length,
         separatorBuilder: (context, index) => Divider(),

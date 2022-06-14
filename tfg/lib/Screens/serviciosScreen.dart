@@ -3,10 +3,8 @@ import 'package:tfg/Screens/servicios/alojamientoSreen.dart';
 import 'package:tfg/Screens/servicios/baresRestaurantesScreen.dart';
 import 'package:tfg/Screens/servicios/otrosScreen.dart';
 import 'package:tfg/Screens/servicios/tiendasScreen.dart';
-import 'package:tfg/Widgets/tarjetas.dart';
 
 import '../Widgets/appBar.dart';
-import 'mosqueruelaScreen.dart';
 
 class serviciosScreen extends StatefulWidget {
   const serviciosScreen({Key? key}) : super(key: key);
@@ -131,7 +129,7 @@ class _serviciosScreenState extends State<serviciosScreen> {
                           size: 30,
                         ),
                         title: Text(
-                          "Otros",
+                          "Todos",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 18,

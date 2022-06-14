@@ -1,11 +1,14 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tfg/Screens/homeScreen.dart';
+import 'package:tfg/bd/asociaciones.dart';
+import 'package:tfg/bd/caza.dart';
 import 'package:tfg/bd/noticias.dart';
 import 'package:tfg/bd/servicios.dart';
 
 import '../bd/turismo.dart';
 
+//Clase que representa la splash screen
 class splashScreen extends StatefulWidget {
   @override
   _splashScreenState createState() => _splashScreenState();
@@ -20,6 +23,8 @@ class _splashScreenState extends State<splashScreen> {
     leer_rutasLargas_turismo();
     leer_todasNoticias_noticias();
     leer_servicios();
+    leer_asociaciones();
+    leer_caza();
 
     Timer(
         Duration(seconds: 3),

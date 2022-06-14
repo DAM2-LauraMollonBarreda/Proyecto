@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tfg/Screens/mapaScreen.dart';
 
 import '../Widgets/widgets.dart';
 
@@ -57,7 +58,10 @@ class _mosqueruelaScreenState extends State<mosqueruelaScreen> {
               icon: const Icon(Icons.location_on),
               color: Colors.cyan[50],
               //TO_DO:
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => mapaScreen()));
+              },
             ),
           ),
           //espacio
@@ -75,7 +79,8 @@ class _mosqueruelaScreenState extends State<mosqueruelaScreen> {
               url:
                   "https://1.bp.blogspot.com/-zPmxJwBILDU/XlhooV5d4YI/AAAAAAAAUQI/n0eKjK6XCwQAu0c1RB4yQLv5BbBpmfl_QCNcBGAsYHQ/s1600/Mosqueruela-099.jpg",
               titulo: 'Historia',
-              texto: ''),
+              texto:
+                  'Se cree que el origen del nombre proviene de la palabra "mosquera", que era una zona de descanso para el ganado trashumante (o más bien "transterminante") que contaba con agua y sombra. Poco adecuada para el cultivo, tras la conquista aragonesa, a finales del siglo XII, toda la zona se dedicó a la "boyante" explotación ganadera, en aquella época tan necesaria para las ambiciones de los monarcas como lucrativa. Los orígenes documentados de Mosqueruela se remontan a 1265, cuando fue fundada por orden de Jaime I, aunque todo indica que en tal lugar ya existía una casa fuerte habitada. \n A lo largo de los siglos XIII y XIV la villa consiguió un gran desarrollo debido principalmente a la ganadería. Esto explica la existencia de viejas masías, que eran pequeños centros de explotación. En 1333 el ayuntamiento se hizo con el Castillo del Mayo o del Majo, en pugna con el ayuntamiento de Villafranca del Cid. A finales del siglo XIV, durante la guerra de los Pedros (1356-1369), Mosqueruela permaneció fiel a Pedro IV, obteniendo el título de villa en 1366.'),
         ],
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tfg/Screens/caza/batida.dart';
+import 'package:tfg/Screens/mapaBatidasScreen.dart';
 import 'package:tfg/Widgets/botones.dart';
 import 'package:tfg/Widgets/tarjetas.dart';
 
@@ -43,18 +43,10 @@ class cazaScreen extends StatelessWidget {
           tarjetaExpandible(
               url: 'https://fac.es/img/noticias/1590640416-jabali.jpg',
               titulo: 'Jabali',
-              texto: 'texto'),
+              texto:
+                  'La caza del jabalí tambien es tipica en el municipio. Se realiza tanto en grupo de grandes personas llamada batida en la que participan cazadores que estan esperando al jabalí en un sitio logico (por donde suele pasar el jabalí), como perros que van en busca de estos animales para sacarlos de sus escondites. A continuanción se muestra un mapa en el cual se marca el sitio en el que se esta cazando. En caso de que el marcador se encuentre dentro pueblo significa que no se esta realizando ninguna batida en el termino municipal.'),
           Row(
             children: <Widget>[
-              Expanded(
-                  child: IconButton(
-                icon: Icon(
-                  Icons.info,
-                  color: Colors.cyan,
-                  size: 30,
-                ),
-                onPressed: () {},
-              )),
               Expanded(
                   child: IconButton(
                 icon: Icon(
@@ -63,8 +55,10 @@ class cazaScreen extends StatelessWidget {
                   size: 30,
                 ),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => BatidaScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => mapaBatidasScreen()));
                 },
               )),
             ],
@@ -74,22 +68,8 @@ class cazaScreen extends StatelessWidget {
               url:
                   'https://revistajaraysedal.es/wp-content/uploads/agricultura-caza-PAC.jpg',
               titulo: 'Caza menor',
-              texto: 'texto'),
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: IconButton(
-                icon: Icon(
-                  Icons.info,
-                  color: Colors.cyan,
-                  size: 30,
-                ),
-                onPressed: () {
-                  //Todo: Falta poner la redireccion a la zona de la asociacion de los cazadores
-                },
-              )),
-            ],
-          ),
+              texto:
+                  'La caza menor queda caracterizada por el tamaño de los animales a capturar y no estrictamente por la forma o la modalidad de la cacería. Se ejercita, pues, sobre piezas de pequeño tamaño tales como la perdiz, la tórtola, el conejo, ciertas aves acuáticas, especies migratorias, etc. \n En la zona de nuestro pueblo lo que más se practica es la caza de codorniz, pediz y liebre'),
         ],
       ),
     );

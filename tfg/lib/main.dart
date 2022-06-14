@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:tfg/Screens/splashScreen.dart';
 
+import 'package:dcdg/dcdg.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
